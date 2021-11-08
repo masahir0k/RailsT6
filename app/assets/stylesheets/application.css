@@ -11,5 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+    => including app/assets/stylesheets
  *= require_self
+    => including app/assets/stylesheets/application.css
  */
