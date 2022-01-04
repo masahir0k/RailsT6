@@ -10,7 +10,7 @@ class User < ApplicationRecord
       # let to use hashed password and password_confirmation as variable, not in db
       # let to use authenticate method
 
-  validates :password, presence: true, length: {minimum: 6}
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
